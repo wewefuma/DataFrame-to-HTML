@@ -9,6 +9,7 @@ df = df.sort_values(by="Branches", ascending=True)
 # fills NaN values with an empty string for cleaner output in HTML
 df= df.fillna('')
 
+# can modify as needed
 # html template to be written
 html_template = """
 <div class="card" data-category="{REGION}" href="#mapFrame">
@@ -26,7 +27,8 @@ generated_html = []
 
 # for loop reiterating through the dataframe
 for index, row in df.iterrows():
-    
+
+    # can modify as needed
     # formats the dictionary values in html_template using the corresponding values in the dataframe
     html_code = html_template.format(
         REGION=row['Region Code'],
